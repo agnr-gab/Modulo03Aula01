@@ -49,7 +49,7 @@ public class Lista01Ex02 {
             if (opcaoMenu == 4) { //encerra o programa
                 break;
             }
-        } while (opcaoMenu <= 3);
+        } while (opcaoMenu <= 3); //condição do loop
     }
 }
 
