@@ -34,7 +34,7 @@ public class Lista01Ex02 {
             }
             if (opcaoMenu == 2)//mostra a lista de canditades cadastrades
                 for (Double verificarLista : listaMatricula.keySet()) {
-                    System.out.println("Produto: " + verificarLista + "valor R$ " + listaMatricula.get(verificarLista));
+                    System.out.println("Canditade matrícula nº: " + verificarLista + "  Nota: " + listaMatricula.get(verificarLista));
                 }
             if (opcaoMenu == 3) { //realiza a exclusão via número de matricula
                 System.out.println("Digite o numero da matrícula de canditade que deseja excluir da lista:"); //exclusão de um produto do cadastro
@@ -49,7 +49,7 @@ public class Lista01Ex02 {
             if (opcaoMenu == 4) { //encerra o programa
                 break;
             }
-        } while (opcaoMenu >= 3);
+        } while (opcaoMenu <= 3);
     }
 }
 
