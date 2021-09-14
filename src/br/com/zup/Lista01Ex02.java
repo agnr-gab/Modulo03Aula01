@@ -43,10 +43,14 @@ public class Lista01Ex02 {
                 for (Double verificaMatricula : listaMatricula.keySet()) {
                     matriculaDeletada = deletarMatricula;
                 }
-                System.out.println("A exclusão da matrícula nº " +deletarMatricula+" foi realizada com sucesso !"); //mensagem de confirmção do produto que foi excluido
+                System.out.println("A exclusão da matrícula nº " +deletarMatricula+" foi realizada com sucesso!"); //mensagem de confirmção do produto que foi excluido
                 listaMatricula.remove(matriculaDeletada);
             }
+            if (opcaoMenu <1 | opcaoMenu >4) { // opção inválida digitada
+                System.out.println("O número digitado não corresponde as opções do menu. Verifique e digite uma opção válida!");
+            }
             if (opcaoMenu == 4) { //encerra o programa
+                System.out.println("Obrigada por usar nosso programa. \nSistema encerrado!");
                 break;
             }
         } while (opcaoMenu <= 3); //condição do loop
