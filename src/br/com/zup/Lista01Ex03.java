@@ -11,6 +11,15 @@ public class Lista01Ex03 {
         HashMap<String, String> listaCardapio = new HashMap<String, String>();
 
         System.out.println("Bem-vinde ao nosso restaurante! \nMonte seu prato!");
-
+       int opcaoMenu;
+        while (true) {
+            System.out.println("[1] para montar seu prato");
+            System.out.println("[2] para verificar pratos");
+            opcaoMenu = leitorCardapio.nextInt();
+            leitorCardapio.nextLine();
+        }
+        if (opcaoMenu == 4){
+            break;
+        }
     }
 }
