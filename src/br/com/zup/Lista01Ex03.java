@@ -39,13 +39,26 @@ public class Lista01Ex03 {
                         System.out.println("O prato principal cadastrado foi: " + verificarCardapio + " com os ingredientes adicionais: " + listaCardapio.get(verificarCardapio));
                     }
                 }
-                if (opcaoMenu == 4) {
-                    loop = false;
-                    break;
+            }
+            if (opcaoMenu == 3) {
+                if (listaCardapio.isEmpty()) { //se o usuario não tiver cadastrado nada ainda
+                    System.out.println("Ainda não foi cadastrado um prato principal no sistema. Faça o cadastro primeiramente!");
+                } else {
+                    System.out.println("Digite o nome do produto que deseja excluir da lista:"); //exclusão de um prato do cadastro
+                    String pratoDeletado = ""; //entrada do prato a ser deletado
+                    String deletarPrato = leitorCardapio.nextLine();
+                    for (String verificaCardapio : listaCardapio.keySet()) {
+                        pratoDeletado = deletarPrato;
+                    }
+                    System.out.println("A exclusão do prato principal " + deletarPrato + " foi realizada com sucesso do cadastro!"); //mensagem de confirmação do produto que foi excluído
+                    listaCardapio.remove(pratoDeletado);
                 }
             }
-
+            if (opcaoMenu == 4) {
+                loop = false;
+                break;
+            }
         }
     }
-
 }
+
