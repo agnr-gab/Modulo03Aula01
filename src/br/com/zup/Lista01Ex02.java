@@ -25,9 +25,9 @@ public class Lista01Ex02 {
             leitorMatricula.nextLine(); //limpar o buffer evita erro de entrada de dados
 
             if (opcaoMenu == 1) {
-                System.out.println("Digite o nome do produto");
+                System.out.println("Digite o número da matrícula do canditade:");
                 Double matriculaAlune = leitorMatricula.nextDouble();
-                System.out.println("Digite o preço do produto");
+                System.out.println("Digite a nota do canditade:");
                 Double notaAlune = leitorMatricula.nextDouble();
                 listaMatricula.put(matriculaAlune, notaAlune);
                 System.out.println("___Canditade cadastrade com sucesso___");
@@ -36,6 +36,16 @@ public class Lista01Ex02 {
                 for (Double verificarLista : listaMatricula.keySet()) {
                     System.out.println("Produto: " + verificarLista + "valor R$ " + listaMatricula.get(verificarLista));
                 }
+            if (opcaoMenu == 3) {
+                System.out.println("Digite o numero da matrícula de canditade que deseja excluir da lista:"); //exclusão de um produto do cadastro
+                double matriculaDeletada = 0; //entrada do produto a ser deletado
+                double deletarMatricula = leitorMatricula.nextDouble();
+                for (Double verificaMatricula : listaMatricula.keySet()) {
+                    matriculaDeletada = deletarMatricula;
+                }
+                System.out.println("A exclusão da matrícula nº " +deletarMatricula+" foi realizada com sucesso !"); //mensagem de confirmção do produto que foi excluido
+                listaMatricula.remove(matriculaDeletada);
+            }
             if (opcaoMenu == 4) {
                 break;
             }
